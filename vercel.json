@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend_integration.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/backend_integration.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/PF - Atlas.html"
+    }
+  ]
+}
